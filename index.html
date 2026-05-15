@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Web Engine | Premium Blooket Exploit</title>
+    <meta name="theme-color" content="#0A0A0C">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-Copj0Is8.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Exn-di7q.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="logo">
+                <span class="vortex-text">VORTEX</span>
+                <span class="engine-text">ENGINE</span>
+            </div>
+            <div class="nav-links">
+                <button class="nav-btn active" data-tab="dashboard">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" fill="currentColor"/></svg>
+                    Dashboard
+                </button>
+                <button class="nav-btn" data-tab="modules">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" fill="currentColor"/></svg>
+                    Modules
+                </button>
+                <button class="nav-btn" data-tab="kahoot">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/></svg>
+                    Kahoot
+                </button>
+                <button class="nav-btn" data-tab="settings">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" fill="currentColor"/></svg>
+                    Settings
+                </button>
+            </div>
+            <div class="status-indicator">
+                <div class="dot red" id="connection-dot"></div>
+                <span id="connection-text">Not Connected</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="content">
+            <!-- Dashboard Tab -->
+            <section id="tab-dashboard" class="tab-content active">
+                <header class="tab-header">
+                    <h1>DASHBOARD</h1>
+                    <p>Initialize your session to start exploitation.</p>
+                </header>
+                <div class="grid-container">
+                    <div class="card glass login-card">
+                        <h2>SESSION LOGIN</h2>
+                        <div class="input-group">
+                            <label>Game ID</label>
+                            <input type="text" id="game-id" placeholder="e.g. 123456">
+                        </div>
+                        <div class="input-group">
+                            <label>Nickname</label>
+                            <input type="text" id="nickname" placeholder="VortexUser">
+                        </div>
+                        <button id="btn-join" class="btn-primary">INITIALIZE ENGINE</button>
+                        <p class="small-note" id="join-status">Ready to connect.</p>
+                    </div>
+                    <div class="card glass info-card">
+                        <h2>ENGINE STATUS</h2>
+                        <div class="status-grid">
+                            <div class="status-item">
+                                <span class="label">Detected Mode</span>
+                                <span class="value" id="mode-val">None</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="label">Blook</span>
+                                <span class="value" id="blook-val">Default</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modules Tab -->
+            <section id="tab-modules" class="tab-content">
+                <header class="tab-header">
+                    <h1 id="module-title">MODULE DASHBOARD</h1>
+                    <p>Select a game mode to unlock specific exploits.</p>
+                </header>
+                <div class="module-layout">
+                    <!-- Left: Global & Automation -->
+                    <div class="module-col">
+                        <div class="section-label">AUTOMATION</div>
+                        <div class="card glass compact-card">
+                            <div class="control-row">
+                                <div class="ctrl-info">
+                                    <span class="ctrl-title">Auto-Farm</span>
+                                    <span class="ctrl-desc">Simulate perfect gameplay</span>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" id="toggle-autofarm">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card glass compact-card">
+                            <div class="control-row">
+                                <div class="ctrl-info">
+                                    <span class="ctrl-title">Auto-Rejoin</span>
+                                    <span class="ctrl-desc">Bypass host kicks</span>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" id="toggle-autorejoin">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="section-label">GLOBAL EXPLOITS</div>
+                        <div class="card glass">
+                            <div class="input-group">
+                                <label>Change Blook</label>
+                                <select id="select-blook"></select>
+                            </div>
+                            <div class="input-group">
+                                <label>Set Banner ID</label>
+                                <div class="input-with-btn">
+                                    <input type="text" id="banner-id" placeholder="ID">
+                                    <button id="btn-banner">Set</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-label">LIVE PLAYERS</div>
+                        <div class="card glass player-list-container">
+                            <div id="player-list">
+                                <p class="empty-msg">Waiting for session...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Mode Specific -->
+                    <div class="module-col">
+                        <div class="section-label" id="mode-specific-label">MODE EXPLOITS</div>
+                        <div id="mode-exploit-container" class="exploit-grid">
+                            <p class="empty-msg">Join a game to unlock exploits.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Kahoot Tab -->
+            <section id="tab-kahoot" class="tab-content">
+                <header class="tab-header">
+                    <h1>KAHOOT</h1>
+                    <p>Quick launch a Kahoot game without leaving the engine.</p>
+                </header>
+                <div class="grid-container">
+                    <div class="card glass">
+                        <h2>KAHOOT LAUNCHER</h2>
+                        <div class="input-group">
+                            <label>Game PIN</label>
+                            <input type="text" id="kahoot-pin" placeholder="e.g. 12345678">
+                        </div>
+                        <div class="input-group">
+                            <label>Nickname</label>
+                            <input type="text" id="kahoot-nickname" placeholder="VortexPlayer">
+                        </div>
+                        <button id="btn-kahoot-join" class="btn-primary">OPEN KAHOOT</button>
+                        <p class="small-note">This opens Kahoot in a new tab so you can join quickly.</p>
+                    </div>
+                    <div class="card glass">
+                        <h2>KAHOOT OPTIONS</h2>
+                        <div class="control-row">
+                            <div>
+                                <span class="ctrl-title">Auto-open Kahoot</span>
+                                <span class="ctrl-desc">Open Kahoot automatically after entering a pin.</span>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="toggle-autoopen-kahoot">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <p class="small-note">If enabled, the engine will remember your Kahoot preference.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Tab -->
+            <section id="tab-settings" class="tab-content">
+                <header class="tab-header">
+                    <h1>SETTINGS</h1>
+                    <p>Configure the app and save your preferences.</p>
+                </header>
+                <div class="grid-container">
+                    <div class="card glass">
+                        <h2>APP SETTINGS</h2>
+                        <div class="input-group">
+                            <label>Theme</label>
+                            <select id="select-theme">
+                                <option value="dark">Dark</option>
+                                <option value="light">Light</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Auto-open Kahoot</label>
+                            <label class="switch">
+                                <input type="checkbox" id="toggle-autoopen-kahoot-settings">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <button id="btn-save-settings" class="btn-primary">SAVE SETTINGS</button>
+                    </div>
+                    <div class="card glass">
+                        <h2>ENGINE INFO</h2>
+                        <p class="small-note">Current game: <span id="settings-current-game">None</span></p>
+                        <p class="small-note">Nickname: <span id="settings-nickname">Not joined</span></p>
+                        <button id="btn-reset-app" class="btn-primary">RESET APP</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
